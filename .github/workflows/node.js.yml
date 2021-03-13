@@ -24,10 +24,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: buildfirsts
-      run: |
-         npm install
-         npm run release
     - name: webext-buildtools-chrome-crx-action
       uses: cardinalby/webext-buildtools-chrome-crx-action@2.0.0
     # pack zip and read manifest, can be reused in the following steps
